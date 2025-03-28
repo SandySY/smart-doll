@@ -1,0 +1,18 @@
+<view class="section">
+    <view class="section-title">开始时间</view>
+    <picker bindchange="bindDateChange" end="2050-12-31" mode="date" start="2015-01-01" value="{{date}}">
+        <view class="picker"> {{date}} </view>
+    </picker>
+    <picker bindchange="bindTimeChange" end="23:59" mode="time" start="00:00" value="{{time}}">
+        <view class="picker"> {{time}} </view>
+    </picker>
+</view>
+<view class="section">
+    <view class="section-title">结束时间</view>
+    <picker bindchange="bindDateChange1" end="2050-12-31" mode="date" start="2015-01-01" value="{{date1}}">
+        <view class="picker"> {{date1}} </view>
+    </picker>
+    <picker bindchange="bindTimeChange1" end="23:59" mode="time" start="00:00" value="{{time1}}">
+        <view class="picker"> {{time1}} </view>
+    </picker>
+</view>

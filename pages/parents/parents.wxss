@@ -1,0 +1,119 @@
+.indexflex {
+    position: fixed;
+    top: 0
+}
+
+.indexFlexTop {
+    padding: 0 3%
+}
+
+.place {
+    border-bottom: 0
+}
+
+.start .price,.start .truck {
+    border-radius: 25rpx;
+    display: inline-block;
+    line-height: 30rpx;
+    margin: 0 10rpx;
+    padding: 8rpx 0;
+    vertical-align: top
+}
+
+.place .start1 {
+    width: 40%!important
+}
+
+.start .truck {
+    color: #000;
+    display: block;
+    font-size: 35rpx
+}
+
+.start .price {
+    color: #dcdcdc;
+    font-size: 24rpx
+}
+
+.end wx-image {
+    height: 40px;
+    margin-left: 30%;
+    width: 40px
+}
+
+.shit {
+    background: #f88f00;
+    -webkit-background-size: 108px 27px;
+    background-size: 108px 27px;
+    border-radius: 6px;
+    color: #fff;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 20px;
+    line-height: 42px;
+    margin: 0 10px;
+    text-align: center
+}
+
+.product-list {
+    box-sizing: border-box;
+    width: 100%
+}
+
+.choice-bar {
+    font-size: 14px;
+    position: fixed;
+    width: 20%
+}
+
+.chioce-item,.choice-bar {
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex
+}
+
+.chioce-item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #ddd;
+    border-left: 1rpx solid #ddd;
+    border-top: 1rpx solid #ddd;
+    height: 80rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    width: 100%
+}
+
+.icon-chioce {
+    height: 30rpx;
+    width: 30rpx
+}
+
+.district-list,.filter-list,.sorting-list {
+    background-color: #fff;
+    border-bottom: 1rpx solid #ddd;
+    font-size: 14px;
+    left: 0;
+    margin-top: 2rpx;
+    position: absolute;
+    top: 80rpx;
+    width: 100%;
+    z-index: -1
+}
+
+.chioce-list-hide {
+    display: none!important
+}
+
+.chioce-list-show {
+    -webkit-animation: slide .5s;
+    animation: slide .5s
+}
+
+.sorting-item {
+    border-bottom: 1rpx solid #ddd;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx
+}

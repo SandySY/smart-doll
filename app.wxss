@@ -1,0 +1,598 @@
+.login-page {
+    height: 100vh;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}
+
+.container,.login-page {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.container {
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 200rpx 0
+}
+
+page {
+    background-color: #fbf9fe;
+    font-family: Microsoft YaHei,Verdana,Arial,Helvetica,sans-serif;
+    min-height: 100vh
+}
+
+.section {
+    font-size: 15px
+}
+
+.page-header {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #aaa;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 32rpx;
+    margin-top: 50rpx
+}
+
+.page-header-text {
+    padding: 20rpx 40rpx
+}
+
+.page-header-line {
+    border-bottom: 1px solid #ccc;
+    height: 1px;
+    width: 150rpx
+}
+
+.page-page {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow-x: hidden
+}
+
+.page-body,.page-body-wrapper {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%
+}
+
+.page-body-wrapper {
+    margin-top: 100rpx
+}
+
+.page-body-wrapper wx-form {
+    width: 100%
+}
+
+.page-body-wording {
+    padding: 200rpx 100rpx;
+    text-align: center
+}
+
+.page-body-info {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 50rpx;
+    padding: 50rpx 0 150rpx;
+    width: 100%
+}
+
+.page-body-title {
+    font-size: 32rpx;
+    margin-bottom: 100rpx
+}
+
+.page-body-text {
+    color: #ccc;
+    font-size: 30rpx;
+    line-height: 26px
+}
+
+.page-body-text-small {
+    color: #000;
+    font-size: 24rpx;
+    margin-bottom: 100rpx
+}
+
+.page-body-form {
+    background-color: #fff;
+    border: 1px solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%
+}
+
+.page-body-form-item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 34rpx;
+    height: 88rpx;
+    margin-left: 30rpx
+}
+
+.page-body-form-key {
+    color: #000;
+    width: 180rpx
+}
+
+.page-body-form-value {
+    -webkit-flex-grow: 1;
+    flex-grow: 1
+}
+
+.page-body-form-value .input-placeholder {
+    color: #b2b2b2
+}
+
+.page-body-form-picker {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 36rpx;
+    height: 100rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-left: 20rpx;
+    padding-right: 20rpx
+}
+
+.page-body-form-picker-value {
+    color: #ccc
+}
+
+.page-body-buttons {
+    width: 100%
+}
+
+.page-body-button {
+    margin: 25rpx
+}
+
+.page-body-button wx-image {
+    height: 150rpx;
+    width: 150rpx
+}
+
+.page-footer {
+    color: #1aad19;
+    font-size: 24rpx;
+    margin: 20rpx 0;
+    text-align: center
+}
+
+.green {
+    color: #09bb07!important
+}
+
+.red {
+    color: #f76260
+}
+
+.lan {
+    color: #1296db!important
+}
+
+.blue {
+    color: #10aeff!important
+}
+
+.yellow {
+    color: #ffbe00
+}
+
+.gray {
+    color: #c9c9c9!important
+}
+
+.white {
+    color: #fff
+}
+
+.strong {
+    font-weight: 700
+}
+
+.bc_white {
+    background-color: #fff
+}
+
+.bc_green {
+    background-color: #09bb07
+}
+
+.bc_red {
+    background-color: #f76260
+}
+
+.bc_blue {
+    background-color: #10aeff
+}
+
+.bc_lan {
+    background-color: #1296db
+}
+
+.bc_yellow {
+    background-color: #ffbe00
+}
+
+.bc_gray {
+    background-color: #c9c9c9
+}
+
+.tc {
+    text-align: center
+}
+
+.page wx-input {
+    background-color: #fff;
+    padding: 20rpx 30rpx
+}
+
+wx-checkbox,wx-radio {
+    margin-right: 10rpx
+}
+
+.btn-area {
+    padding: 0 30px
+}
+
+.btn-area wx-button {
+    margin-bottom: 20rpx;
+    margin-top: 20rpx
+}
+
+.page__hd {
+    padding: 50rpx 50rpx 100rpx;
+    text-align: center
+}
+
+.page__title {
+    border-bottom: 1px solid #ccc;
+    color: #aaa;
+    display: inline-block;
+    font-size: 32rpx;
+    padding: 20rpx 40rpx
+}
+
+.page__desc {
+    color: #bbb;
+    display: none;
+    font-size: 26rpx;
+    margin-top: 20rpx
+}
+
+.section {
+    margin-bottom: 80rpx
+}
+
+.section_gap {
+    padding: 0 30rpx
+}
+
+.section__title {
+    margin-bottom: 16rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx
+}
+
+.section_gap .section__title {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.userinfo {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 20px
+}
+
+.userinfo-avatar {
+    border-radius: 50%;
+    height: 128rpx;
+    margin: 20rpx;
+    width: 128rpx
+}
+
+.userinfo-nickname {
+    color: #aaa
+}
+
+.indexflex {
+    background-color: #fff;
+    text-align: center;
+    top: 0;
+    width: 100vw;
+    z-index: 5
+}
+
+.cityTitle {
+    color: #8bbfff;
+    font-size: 16px;
+    padding-top: 30rpx;
+    text-align: center
+}
+
+.indexFlexCenter {
+    background-color: #fff;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 10
+}
+
+.indexBoxSelect {
+    border-bottom: 1px solid #dcdcdc
+}
+
+.indexFlexBoxTitle {
+    font-size: 15px;
+    padding: 15px;
+    text-align: left
+}
+
+.indexFlexBoxTitleReset {
+    color: #4169e1;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    height: 100%
+}
+
+.indexFlexBox {
+    padding-left: 15px;
+    width: 95%
+}
+
+.indexFlexBox wx-view {
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -1px;
+    margin-top: -4px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 23%
+}
+
+.carButton {
+    background-color: #f8f8f8;
+    border: 1px solid #dcdcdc!important;
+    border-radius: 3px;
+    height: 30px!important;
+    line-height: 30px!important;
+    margin: 10px;
+    width: 21.5%!important
+}
+
+.hoverButton {
+    background-color: #4169e1;
+    color: #fff
+}
+
+.body-view {
+    font-size: 19px
+}
+
+.body-view wx-view {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 10px 5px 15px
+}
+
+.page wx-view {
+    color: #353535;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    text-align: center;
+    width: 100%
+}
+
+.page wx-navigator:last-child {
+    border: none
+}
+
+.goods {
+    background: #efeff4;
+    min-height: 100vh
+}
+
+.monad {
+    background: #fff;
+    border-radius: 6rpx;
+    box-shadow: 0 1rpx 2rpx 0 rgba(0,0,0,.2);
+    height: 250rpx;
+    margin-bottom: 30rpx;
+    padding: 0 60rpx
+}
+
+.place {
+    border-bottom: 1rpx solid #f0f5fa;
+    height: 140rpx;
+    position: relative
+}
+
+.place wx-view {
+    text-algin: center
+}
+
+.place wx-text,.place wx-view {
+    display: block
+}
+
+.place .end,.place .end1,.place .start {
+    padding-top: 10rpx;
+    position: absolute;
+    text-align: center;
+    width: 180rpx
+}
+
+.place .start {
+    left: -50rpx;
+    top: 0
+}
+
+.place .end {
+    right: -20rpx;
+    top: 0
+}
+
+.place .end1 {
+    right: 70rpx;
+    top: 0
+}
+
+.place .end2 {
+    right: 80rpx;
+    top: 0
+}
+
+.place .city {
+    color: #333;
+    font-size: 35rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    margin-bottom: 20rpx
+}
+
+.place .province {
+    color: #666;
+    font-size: 28rpx
+}
+
+.place .distance {
+    display: block;
+    margin: 0 auto;
+    padding-top: 42rpx;
+    text-align: center;
+    width: 276rpx
+}
+
+.place .distance .image,.place .distance wx-image {
+    height: 30rpx;
+    margin-bottom: 12rpx;
+    overflow: hidden;
+    width: 176rpx
+}
+
+.place .distance wx-text {
+    color: #8faacc;
+    font-size: 24rpx;
+    line-height: 24rpx
+}
+
+.condition {
+    display: block;
+    height: 50rpx;
+    padding: 30rpx 0;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%
+}
+
+.condition wx-text {
+    border: 1px solid #eee;
+    border-radius: 25rpx;
+    display: inline-block;
+    font-size: 24rpx;
+    line-height: 30rpx;
+    margin: 0 10rpx;
+    padding: 8rpx 20rpx 7rpx 22rpx;
+    vertical-align: top
+}
+
+.condition .truck {
+    border-color: #8bbfff;
+    color: #8bbfff
+}
+
+.condition .article {
+    border-color: #58df7e;
+    color: #58df7e
+}
+
+.condition .price {
+    border-color: #ffb578;
+    color: #ffb578
+}
+
+.section {
+    padding: 15px
+}
+
+.picker {
+    color: #09bb07;
+    padding: 3px 5px
+}
+
+wx-picker {
+    display: inline-block;
+    padding-left: 20px
+}
+
+.nodate {
+    height: 100vh;
+    line-height: 70vh
+}
+
+.datebotton,.nodate {
+    color: gray;
+    font-size: 25rpx;
+    text-align: center
+}
+
+.datebotton {
+    background-color: #efeff4;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 10rpx
+}
+
+.submit {
+    background-color: #09bb07;
+    color: #fff!important
+}
+
+.nonenet {
+    font-size: 25rpx;
+    height: 100vh;
+    line-height: 50vh;
+    text-align: center;
+    width: 100vw
+}

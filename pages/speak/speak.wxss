@@ -1,0 +1,98 @@
+.h1 {
+    font-size: 20px;
+    padding: 60px 0 20px;
+    text-align: center
+}
+
+.main {
+    margin-top: 80px
+}
+
+.microphone {
+    font-size: 60px;
+    position: relative;
+    text-align: center
+}
+
+.microphone .i {
+    background-color: #efd4b3;
+    border: 1px solid #f3cb8e;
+    border-radius: 100px;
+    color: #ff8c03;
+    height: 100px;
+    line-height: 100px;
+    margin: auto;
+    width: 100px
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3)
+    }
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+        transform: scale(3)
+    }
+}
+
+.fa {
+    height: 54px;
+    width: 54px
+}
+
+.fa,.wave {
+    display: inline-block
+}
+
+.wave {
+    border: 1px solid #f3cb8e;
+    border-radius: 100px;
+    height: 100px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    width: 100px
+}
+
+.ripple {
+    -webkit-animation: ripple 1s infinite;
+    animation: ripple 1s infinite
+}
+
+.words {
+    height: 100px;
+    margin: 40px auto;
+    overflow: auto;
+    width: 80%
+}
+
+.ok {
+    background-color: #ff8c03;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    padding: 2px 0;
+    width: 80%
+}

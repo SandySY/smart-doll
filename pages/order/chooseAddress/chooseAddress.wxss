@@ -1,0 +1,10 @@
+.section {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 10px
+}
+
+.section-distance {
+    color: #ccc;
+    font-size: 13px;
+    text-align: right
+}

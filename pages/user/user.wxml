@@ -1,0 +1,156 @@
+<view wx:if="{{form==true}}">
+    <form bindreset="formReset" bindsubmit="formSubmit" style="width: 100%; padding: 15px; box-sizing: border-box">
+        <view class="section">
+            <view style="text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 20px;">智能体娃娃</view>
+            
+            <!-- 顶部按钮组 -->
+            <view class="card">
+                <view class="button-group">
+                    <button bindtap="openbt" class="shit search-button">搜索设备</button>
+                    <button bindtap="remoteopen" class="shit">读取参数</button>
+                    <button bindtap="remoteclose" class="shit">保存参数</button>
+                    <button bindtap="factorypara" class="shit">默认参数</button>
+                    <button bindtap="reboot" class="shit">设备重启</button>
+                    <button bindtap="messagepackage" class="shit">设备充值</button>
+                </view>
+            </view>
+
+            <progress color="#4A90E2" hidden="{{showprogress}}" percent="{{percent}}" strokeWidth="5" style="margin: 15px 0;"></progress>
+
+            <!-- 基本设置卡片 -->
+            <view class="card">
+                <view class="group-title">基本设置</view>
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">开机欢迎词：</view>
+                    <input bind:input="WELCOME" maxlength="100" name="WELCOME" placeholder="默认联网成功" style="width: 70%;" type="display:{{display}}" value="{{WELCOME}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">休眠词：</view>
+                    <input bind:input="SLEEP" maxlength="100" name="SLEEP" placeholder="默认休息一会儿" style="width: 70%;" type="display:{{display}}" value="{{SLEEP}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">等待答复词：</view>
+                    <input bind:input="WAIT_VOICE" maxlength="100" name="WAIT_VOICE" placeholder="等待答复应答词" style="width: 70%;" type="display:{{display}}" value="{{WAIT_VOICE}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">角色扮演：</view>
+                    <input bind:input="WAKE_VOICE" maxlength="100" name="WAKE_VOICE" placeholder="你是。。。，用。。。的身份语气回答问题。" style="width: 70%;" type="display:{{display}}" value="{{WAKE_VOICE}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">唤醒应答词：</view>
+                    <input bind:input="WAKE_COM" maxlength="100" name="WAKE_COM" placeholder="默认有什么可以帮您" style="width: 70%;" type="display:{{display}}" value="{{WAKE_COM}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">失败应答词：</view>
+                    <input bind:input="FAIL" maxlength="100" name="FAIL" placeholder="默认这个问题我还不会哦" style="width: 70%;" type="display:{{display}}" value="{{FAIL}}"></input>
+                </view>
+            </view>
+
+            <!-- WiFi设置卡片 -->
+            <view class="card">
+                <view class="group-title">WiFi设置</view>
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">wifi账号：</view>
+                    <input bind:input="SSID" maxlength="100" name="SSID" placeholder="只支持2.4g wifi热点" style="width: 40%;" type="display:{{display}}" value="{{SSID}}"></input>
+                    <button bindtap="findwifi" class="shit search-button" style="width: 28%; margin-left: 2%;">搜索wifi</button>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">wifi密码：</view>
+                    <input bind:input="PASSWORD" maxlength="100" name="PASSWORD" placeholder="wifi密码" style="width: 70%;" type="display:{{display}}" value="{{PASSWORD}}"></input>
+                </view>
+            </view>
+
+            <!-- 语音设置卡片 -->
+            <view class="card">
+                <view class="group-title">语音设置</view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 70%;">
+                        <picker bindchange="bindPickerChange" data-index="1" mode="selector" range="{{array}}" value="{{pickerIndex}}">
+                            <view>发音人：{{array[pickerIndex]}}</view>
+                        </picker>
+                    </view>
+                    <button bindtap="testparaPER" class="shit test-button" style="width: 30%;">发音测试</button>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 70%;">
+                        <picker bindchange="bindPickerChange" data-index="2" mode="selector" range="{{emotionarray}}" value="{{emotionpickerIndex}}">
+                            <view>情感：{{emotionarray[emotionpickerIndex]}}</view>
+                        </picker>
+                    </view>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 70%;">
+                        <picker bindchange="bindPickerChange" data-index="3" mode="selector" range="{{languagearray}}" value="{{languagepickerIndex}}">
+                            <view>语言：{{languagearray[languagepickerIndex]}}</view>
+                        </picker>
+                    </view>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">语速：</view>
+                    <input bind:input="SPD" maxlength="100" name="SPD" placeholder="0~15（默认6）" style="width: 40%;" type="display:{{display}}" value="{{SPD}}"></input>
+                    <button bindtap="testparaSPD" class="shit test-button" style="width: 28%; margin-left: 2%;">语速测试</button>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">语调：</view>
+                    <input bind:input="PIT" maxlength="100" name="PIT" placeholder="0~15（默认5）" style="width: 40%;" type="display:{{display}}" value="{{PIT}}"></input>
+                    <button bindtap="testparaPIT" class="shit test-button" style="width: 28%; margin-left: 2%;">语调测试</button>
+                </view>
+            </view>
+
+            <!-- 大模型设置卡片 -->
+            <view class="card">
+                <view class="group-title">大模型设置</view>
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 100%;">
+                        <picker bindchange="bindPickerChange" data-index="4" mode="selector" range="{{modelarray}}" value="{{modelpickerIndex}}">
+                            <view>大模型：{{modelarray[modelpickerIndex]}}</view>
+                        </picker>
+                    </view>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">BOT_ID：</view>
+                    <input bind:input="SERVICE_ID" maxlength="100" name="SERVICE_ID" placeholder="智能体id" style="width: 70%;" type="display:{{display}}" value="{{SERVICE_ID}}"></input>
+                </view>
+                
+                <view style="display: flex; margin-bottom: 15px;">
+                    <view class="section__title" style="width: 30%;">api令牌：</view>
+                    <input bind:input="AI_ACCESS_KEY" maxlength="100" name="AI_ACCESS_KEY" placeholder="api令牌" style="width: 70%;" type="display:{{display}}" value="{{AI_ACCESS_KEY}}"></input>
+                </view>
+            </view>
+
+            <!-- 系统维护区域 -->
+            <view class="card">
+                <view class="group-title">系统维护</view>
+                <button bindtap="onlineupdate" class="shit" style="width: 100%;">升级固件</button>
+                <view style="text-align: center; margin-top: 10px; font-size: 13px; color: #666;">小程序软件版本号:V2.4.5</view>
+            </view>
+
+            <!-- 使用说明区域 -->
+            <view class="card">
+                <view class="group-title">使用说明</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 10px;">1.第一次配网方法: 打开微信小程序"智能体娃娃"搜索配网wifi（打开手机定位）填写wifi密码，打开品恒音频设备启动大概30秒后提示网络断开后，将手机wifi连接到语音设备热点PHASR，密码12345678，点击小程序搜索设备，选择搜索到的设备编号，读取参数后，可以通过小程序修改wifi账号密码等参数，然后保存参数并重启设备。</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 10px;">2.配网后小程序连接方法:手机和音箱连到同一个wifi热点，等待品恒音频设备启动完成，搜索微信小程序"智能体娃娃"，点击搜索设备，点击搜索到的设备编号，读取参数后，可以通过小程序修改参数保存参数或充值。</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 10px;">注意事项: 1.只支持2.4G WIFI热点，不能和5Gwifi热点重名。 2.如果使用自己手机热点，需要把手机wifi断开才能连上小程序。</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 10px;">默认语音命令:</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 5px;">1.播放歌曲。//随机播放tf卡中"歌曲"文件夹里边的MP3，只支持32G以下tf卡，必须格式化成fat32格式。</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 5px;">2.增大音量，减小音量。//增大或减小一格音量</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 5px;">3.退出，退下，再见。//退出对话状态</view>
+                <view style="font-size: 13px; line-height: 1.5; margin-bottom: 5px;">4.说英文。//进入英文对话状态</view>
+                <view style="font-size: 13px; line-height: 1.5;">5.speak chinese。//进入中文对话状态</view>
+            </view>
+        </view>
+    </form>
+</view>
+<view class="nonenet" wx:if="{{networkType==false}}">无网络,请检查数据或者wifi是否打开</view>

@@ -1,0 +1,32 @@
+<view class="chatroom">
+    <view class="header">
+        <view class="left"></view>
+        <view class="middle">{{groupName}}</view>
+        <view class="right"></view>
+    </view>
+    <scroll-view scrollY bindscrolltoupper="onScrollToUpper" class="body" scrollIntoView="{{scrollToMessage}}" scrollTop="{{scrollTop}}" scrollWithAnimation="{{scrollWithAnimation}}">
+        <view class="message {{openId==item._openid?'message__self':''}}" id="item-{{index}}" wx:for="{{chats}}" wx:key="{{item._id}}">
+            <image class="avatar" mode="scaleToFill" src="{{item.avatar}}"></image>
+            <view class="main">
+                <view class="nickname">{{item.nickName}}</view>
+                <view class="image-wrapper" wx:if="{{item.msgType==='image'}}">
+                    <view class="loading" wx:if="{{item.writeStatus>-1}}">{{item.writeStatus}}%</view>
+                    <image bindtap="onMessageImageTap" class="image-content" data-fileid="{{item.tempFilePath||item.imgFileID}}" mode="scallToFill" src="{{item.tempFilePath||item.imgFileID}}" style="{{item.imgStyle}}"></image>
+                </view>
+                <view class="text-wrapper" wx:else>
+                    <view class="loading" wx:if="{{item.writeStatus==='pending'}}">···</view>
+                    <view class="text-content">{{item.textContent}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="footer">
+        <view class="message-sender" wx:if="{{userInfo}}">
+            <input bindconfirm="onConfirmSendText" class="text-input" confirmType="send" cursorSpacing="20" type="text" value="{{textInputValue}}"></input>
+            <image bindtap="onChooseImage" class="btn-send-image" mode="scaleToFill" src="./photo.png"></image>
+        </view>
+        <view class="message-sender" wx:if="{{!userInfo}}">
+            <button bindgetuserinfo="onGetUserInfo" class="userinfo" openType="getUserInfo">请先登录后参与聊天</button>
+        </view>
+    </view>
+</view>

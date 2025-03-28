@@ -1,0 +1,22 @@
+<map bindmarkertap="markertap" covers="{{covers}}" id="map" includePoints="{{markers}}" latitude="23.099994" longitude="113.324520" markers="{{markers}}" polyline="{{polyline}}" scale="15" style="width: {{width}}px; height: {{height}}px;"></map>
+<checkbox-group bindchange="checkboxChange" style="margin-top:20rpx;">
+    <label class="checkbox" wx:for="{{items}}">
+        <checkbox checked="{{item.checked}}" value="{{item.value}}"></checkbox>{{item.name}} </label>
+</checkbox-group>
+<view class="main">
+    <view class="loc" style="margin-left:-50rpx;">
+        <view class="loc-box">
+            <view bindtap="chooseTime" class="when" style="width:600rpx;">
+                <image src="../../images/clock.png"></image>
+                <span wx:if="{{!date||!time}}">选择时间</span>
+                <span wx:elif="{{date&&time}}">开始时间:{{date}} {{time}}</span>
+            </view>
+            <view bindtap="chooseTime" class="when" style="width:600rpx;">
+                <image src="../../images/clock.png"></image>
+                <span wx:if="{{!date1||!time1}}">选择时间</span>
+                <span wx:elif="{{date1&&time1}}">结束时间:{{date1}} {{time1}}</span>
+            </view>
+        </view>
+    </view>
+    <button bindtap="submit" class="shit">清除轨迹信息</button>
+</view>

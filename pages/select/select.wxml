@@ -1,0 +1,1 @@
+<button bindtap="openActionSheet">设备列表。 </button>

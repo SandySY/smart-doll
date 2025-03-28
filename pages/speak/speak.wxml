@@ -1,0 +1,11 @@
+<view class="h1"> 所有人都会收到消息，请谨慎发送！ </view>
+<view class="main">
+    <view class="microphone">
+        <view class="i">
+            <image class="fa" src="../../images/speak.png"></image>
+        </view>
+        <view class="{{wave}}"></view>
+    </view>
+    <view class="words"></view>
+    <button bindtap="speak" class="ok" tapmode="active">{{tips}}</button>
+</view>

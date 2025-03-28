@@ -1,0 +1,42 @@
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">BOOT</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus="启动" placeholder="启动提示" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">WELCOME</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus="{{true}}" placeholder="欢迎词" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">SLEEP</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus="{{true}}" placeholder="休眠提示" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box"></input>
+</view>
+<text style="position: relative; width: 211rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">boot</text>
+<view style="position: relative; width: 364rpx; background: #d3d3d3; height: 50rpx; display: block; box-sizing: border-box; left: 211rpx; top: -50rpx">
+    <input autoFocus="{{true}}" bind:input="inputboot" placeholder="将会获取焦点" style="width: 338rpx; height: 52rpx; display: block; box-sizing: border-box" value="{{boot}}"></input>
+</view>
+<button bind:longpress="savepara">保存</button>
+<button bind:longpress="startBT">蓝牙</button>

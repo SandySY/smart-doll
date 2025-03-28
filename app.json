@@ -1,0 +1,50 @@
+{
+  "entryPagePath": "pages/user/user",
+  "pages": [
+    "pages/user/user",
+    "pages/parents/parents",
+    "pages/select/select",
+    "pages/pay/pay",
+    "pages/speak/speak",
+    "pages/order/order",
+    "pages/order/chooseTime/chooseTime",
+    "pages/order/chooseAddress/chooseAddress",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "permission": {
+    "scope.bluetooth": {
+      "desc": "BLE蓝牙开发"
+    },
+    "scope.userLocation": {
+      "desc": "BLE蓝牙开发定位"
+    },
+    "scope.userLocationBackground": {
+      "desc": "BLE蓝牙开发后台定位"
+    },
+    "scope.wifi": {
+      "desc": "获取WiFi列表的权限描述"
+    }
+  },
+  "style": "v2",
+  "renderer": "webview",
+  "componentFramework": "exparser",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "智能体娃娃",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {}
+}

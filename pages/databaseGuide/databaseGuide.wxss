@@ -1,0 +1,11 @@
+@import "../../style/guide.wxss";
+
+.guide .counter {
+    -webkit-align-content: space-between;
+    align-content: space-between;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-top: 50rpx
+}

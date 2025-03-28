@@ -1,0 +1,19 @@
+<view class="goods">
+    <view bindtap="pressTap" bindtouchend="touchEnd" bindtouchstart="touchStart" class="monad" data-index="{{index}}" style="{{key==index?'background:blue;':''}}z-index:999; height:100rpx;padding:0 10rpx" wx:for="{{items}}">
+        <view class="place">
+            <view class="start start1">
+                <text class="truck" style="line-height:30px;font-size:35rpx">{{item.name}}</text>
+            </view>
+            <view class="distance " style="padding-top:6px;">
+                <text style="line-height:30px;font-size:30rpx">{{item.payinfo}}</text>
+            </view>
+            <view class="end1 ">
+                <text class="province" id="{{objectid[index]}}" style="line-height:30px;font-size:35rpx">{{item.price}}元</text>
+            </view>
+            <view class="end ">
+                <text bindtap="wxpay" class="province" id="{{objectid[index]}}" style="line-height:30px;color:#f88f00;font-size:35rpx">付款</text>
+            </view>
+        </view>
+    </view>
+    <view class="datebotton">套餐为在设备当前基础上增加的调用次数。</view>
+</view>

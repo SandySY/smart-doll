@@ -1,0 +1,21 @@
+<view class="goods">
+    <view bindtap="pressTap" bindtouchend="touchEnd" bindtouchstart="touchStart" class="monad" data-index="{{index}}" style="{{key==index?'background:blue;':''}}z-index:999; height:100rpx;padding:0 10rpx" wx:for="{{items}}">
+        <view class="place">
+            <view class="start start1">
+                <text class="truck" style="line-height:30px;font-size:40rpx">{{item.name}}</text>
+            </view>
+            <view class="distance " style="padding-top:6px;">
+                <text style="margin-left:-50rpx;margin-top:-20rpx;line-height:30px;font-size:30rpx">{{item.imei}}</text>
+                <text style="margin-left:-50rpx;margin-top:-20rpx;line-height:30px;font-size:30rpx">{{item.online}}</text>
+            </view>
+            <view class="end1 ">
+                <text bindtap="lineview" class="province" id="{{objectid[index]}}" style="margin-top:10rpx;margin-left:-50rpx;line-height:30px;color:#f88f00;font-size:40rpx">轨迹</text>
+            </view>
+            <view class="end ">
+                <text bindtap="tocaruser" class="province" id="{{objectid[index]}}" style="margin-top:10rpx;line-height:30px;color:#f88f00;font-size:40rpx">设置</text>
+            </view>
+        </view>
+    </view>
+    <view class="datebotton" wx:if="{{items!=''}}">没有更多了</view>
+    <view bindtap="bindViewTap" class="shit" onclick="dropping();">添加设备</view>
+</view>

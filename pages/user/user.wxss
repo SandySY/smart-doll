@@ -1,0 +1,139 @@
+wx-input {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    font-size: 14px;
+    transition: border-bottom-color 0.3s;
+}
+
+.section__title {
+    padding-left: 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.timeview {
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.picker {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.textarea {
+    border-bottom: 1px solid #dcdcdc;
+    line-height: 30px;
+    margin-bottom: 35rpx
+}
+
+.formlength {
+    height: 50vh;
+    line-height: 50vh
+}
+
+.formlength,.formlength1 {
+    font-size: 25rpx;
+    text-align: center
+}
+
+.formlength1 {
+    line-height: 10vh;
+    padding-left: 10px;
+    padding-top: 40vh
+}
+
+.margin-left {
+    margin-left: 0
+}
+
+.shit {
+    background: linear-gradient(135deg, #4A90E2, #1976D2);
+    background-size: cover;
+    border-radius: 12px;
+    color: #fff;
+    flex: 1;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 5px;
+    text-align: center;
+    padding: 6px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.shit:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.nonenet {
+    background-color: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+}
+
+/* 添加一个卡片样式 */
+.card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 添加分组标题样式 */
+.group-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0 10px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 改进按钮组样式 */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.button-group .shit {
+    flex: 0 0 31%;
+    margin-bottom: 10px;
+}
+
+/* 改进测试按钮的样式 */
+.test-button {
+    background: linear-gradient(135deg, #34C759, #30B350);
+}
+
+/* 添加搜索按钮样式 */
+.search-button {
+    background: linear-gradient(135deg, #FF9500, #E67E00);
+}
+
+wx-input:focus {
+    border-bottom-color: #4A90E2;
+}
